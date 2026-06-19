@@ -71,11 +71,11 @@ export default function Home() {
         {/* CINEMATIC HERO */}
         <section className="h-screen flex items-center relative overflow-hidden">
           <div className="absolute inset-0">
-            <motion.div style={{ y }}>
-              <LazyImage
+            <motion.div className="absolute inset-0" style={{ y }}>
+              <img
                 src="/hero-bg.jpg"
                 alt="Featured artwork"
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
             </motion.div>
             <div className="absolute inset-0 bg-black/50"></div>
