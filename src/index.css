@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -44,79 +44,83 @@
   --font-serif: var(--app-font-serif);
   --font-mono: var(--app-font-mono);
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
 }
 
 :root {
-  --background: 40 22% 96%; /* #f7f5f1 */
-  --foreground: 30 9% 8%; /* #171513 */
+  /* Luxury Color Palette */
+  --background: 40 12% 97%; /* #F7F5F1 */
+  --foreground: 0 0% 7%; /* #111111 */
   
-  --muted: 40 22% 96%;
-  --muted-foreground: 32 8% 43%; /* #756d64 */
+  --muted: 40 12% 97%;
+  --muted-foreground: 0 0% 43%; /* #6E6E6E */
   
-  --border: 34 18% 88%; /* #e8e2da */
-  --input: 34 18% 88%;
-  --ring: 30 9% 8%;
+  --border: 40 10% 90%;
+  --input: 40 10% 90%;
+  --ring: 0 0% 7%;
 
-  --card: 40 22% 96%;
-  --card-foreground: 30 9% 8%;
-  --card-border: 34 18% 88%;
+  --card: 40 12% 97%;
+  --card-foreground: 0 0% 7%;
+  --card-border: 40 10% 90%;
 
-  --popover: 40 22% 96%;
-  --popover-foreground: 30 9% 8%;
-  --popover-border: 34 18% 88%;
+  --popover: 40 12% 97%;
+  --popover-foreground: 0 0% 7%;
+  --popover-border: 40 10% 90%;
 
-  --primary: 30 9% 8%;
-  --primary-foreground: 40 22% 96%;
+  --primary: 0 0% 7%;
+  --primary-foreground: 40 12% 97%;
 
-  --secondary: 40 22% 96%;
-  --secondary-foreground: 30 9% 8%;
+  --secondary: 40 12% 97%;
+  --secondary-foreground: 0 0% 7%;
 
-  --accent: 40 22% 96%;
-  --accent-foreground: 30 9% 8%;
+  --accent: 40 12% 97%;
+  --accent-foreground: 0 0% 7%;
 
   --destructive: 0 84% 60%;
-  --destructive-foreground: 40 22% 96%;
+  --destructive-foreground: 40 12% 97%;
+
+  /* Accent Color - Used Sparingly */
+  --accent-gold: 28 42% 53%; /* #B58B5C */
 
   --app-font-sans: 'Inter', sans-serif;
-  --app-font-serif: 'Playfair Display', serif;
+  --app-font-serif: 'Cormorant Garamond', serif;
   --app-font-mono: Menlo, monospace;
-  --radius: .5rem; 
+  --radius: 0; 
 }
 
 .dark {
-  --background: 30 9% 8%;
-  --foreground: 40 22% 96%;
+  --background: 0 0% 7%;
+  --foreground: 40 12% 97%;
   
-  --muted: 30 9% 8%;
-  --muted-foreground: 34 18% 88%;
+  --muted: 0 0% 7%;
+  --muted-foreground: 40 10% 90%;
   
-  --border: 32 8% 43%;
-  --input: 32 8% 43%;
-  --ring: 40 22% 96%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 40 12% 97%;
 
-  --card: 30 9% 8%;
-  --card-foreground: 40 22% 96%;
-  --card-border: 32 8% 43%;
+  --card: 0 0% 7%;
+  --card-foreground: 40 12% 97%;
+  --card-border: 0 0% 20%;
 
-  --popover: 30 9% 8%;
-  --popover-foreground: 40 22% 96%;
-  --popover-border: 32 8% 43%;
+  --popover: 0 0% 7%;
+  --popover-foreground: 40 12% 97%;
+  --popover-border: 0 0% 20%;
 
-  --primary: 40 22% 96%;
-  --primary-foreground: 30 9% 8%;
+  --primary: 40 12% 97%;
+  --primary-foreground: 0 0% 7%;
 
-  --secondary: 30 9% 8%;
-  --secondary-foreground: 40 22% 96%;
+  --secondary: 0 0% 7%;
+  --secondary-foreground: 40 12% 97%;
 
-  --accent: 30 9% 8%;
-  --accent-foreground: 40 22% 96%;
+  --accent: 0 0% 7%;
+  --accent-foreground: 40 12% 97%;
 
   --destructive: 0 84% 60%;
-  --destructive-foreground: 30 9% 8%;
+  --destructive-foreground: 0 0% 7%;
 }
 
 @layer base {
@@ -131,23 +135,144 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--foreground) / 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--foreground) / 0.5);
+  }
 }
 
-/* Paper grain effect */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: .045;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
-  mix-blend-mode: multiply;
+/* Luxury Animation System */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-duration: 700ms;
+  transition-timing-function: ease;
 }
 
+/* Remove transitions from interactive elements for better UX */
+button, a, input, textarea, select {
+  transition-duration: 300ms;
+}
+
+/* Luxury Spacing Utilities */
 @layer utilities {
-  .section {
-    padding-top: clamp(5rem, 10vw, 10rem);
-    padding-bottom: clamp(5rem, 10vw, 10rem);
+  .section-luxury {
+    padding-top: clamp(6rem, 15vw, 12rem);
+    padding-bottom: clamp(6rem, 15vw, 12rem);
+  }
+  
+  .section-luxury-sm {
+    padding-top: clamp(4rem, 10vw, 8rem);
+    padding-bottom: clamp(4rem, 10vw, 8rem);
+  }
+  
+  .container-luxury {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.5rem, 5vw, 4rem);
+    padding-right: clamp(1.5rem, 5vw, 4rem);
+  }
+  
+  .text-display {
+    font-family: var(--app-font-serif);
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-display-xl {
+    font-family: var(--app-font-serif);
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+  }
+  
+  .text-heading {
+    font-family: var(--app-font-serif);
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-heading-lg {
+    font-family: var(--app-font-serif);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+  
+  .text-body {
+    font-family: var(--app-font-sans);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+  }
+  
+  .text-body-lg {
+    font-family: var(--app-font-sans);
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    line-height: 1.75;
+    letter-spacing: 0.005em;
+  }
+  
+  .text-caption {
+    font-family: var(--app-font-sans);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  
+  .text-caption-lg {
+    font-family: var(--app-font-sans);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  /* Luxury hover effect */
+  .hover-luxury {
+    transition: transform 700ms ease;
+  }
+  
+  .hover-luxury:hover {
+    transform: scale(1.02);
+  }
+  
+  /* No rounded corners utility */
+  .no-radius {
+    border-radius: 0 !important;
+  }
+  
+  /* No shadow utility */
+  .no-shadow {
+    box-shadow: none !important;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 }
