@@ -1,0 +1,6 @@
+{
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm --filter @workspace/jordan-creative run build",
+  "outputDirectory": "artifacts/jordan-creative/dist/public",
+  "framework": null
+}
